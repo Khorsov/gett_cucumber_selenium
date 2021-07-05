@@ -4,7 +4,7 @@ Feature: Email Validation
   Background:
     Given the user on login page
 
-
+  @wip1
   Scenario Outline:
     When user input incorrect "<email>"
     Then user should see an validation Error message

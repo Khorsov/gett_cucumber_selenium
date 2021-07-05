@@ -4,7 +4,7 @@ Feature: Verify Forget Password button
   Background:
     Given the user on login page
 
-
+  @wip
   Scenario:
     When user click on Forget Password button
     Then user should see message "Need to access your account?"

@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6855000000,
+              "duration": 15401000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,87 +24,40 @@
         ]
       },
       {
-        "start_timestamp": "2021-06-30T17:27:10.941Z",
-        "line": 8,
-        "name": "",
+        "start_timestamp": "2021-07-05T18:32:15.916Z",
+        "line": 7,
+        "name": "User should see English language as first option",
         "description": "",
-        "id": "negative-login-functionality-with-wrong-username-or-password;",
+        "id": "verify-localization-on-login-page;user-should-see-english-language-as-first-option",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 351000000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been \"select\" but was \"div\"\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-6785ES8\u0027, ip: \u002710.0.0.128\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.Select.\u003cinit\u003e(Select.java:48)\r\n\tat com.newProject.step_definitions.languageDropdownVerification.english_should_be_as_first_option(languageDropdownVerification.java:15)\r\n\tat ✽.English should be as first option(file:///C:/Users/Khorsov/Desktop/All%20IntellJ%20Projects/gett_cucumber_selenium/src/test/resources/features/VerifyLocalizationLanguages.feature:8)\r\n",
+              "duration": 37000000,
+              "status": "failed"
             },
-            "line": 9,
-            "name": "user login with invalid username",
+            "line": 8,
+            "name": "English should be as first option",
             "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_login_with_wrong_username()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 109000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user click on button Next",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_click_on_button_next()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 362000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user login with invalid password",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_login_with_wrong_password()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 88000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user click on button Sign In",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_click_on_button_sign_in()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 693000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user should see warning message on display",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_should_see_warning_message_on_display_as()"
+              "location": "com.newProject.step_definitions.languageDropdownVerification.english_should_be_as_first_option()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@wip"
+            "name": "@test"
           }
         ]
       }
     ],
-    "name": "Negative Login Functionality with wrong username or password",
-    "description": "  As a user, I shouldn\u0027t be able to login using wrong username",
-    "id": "negative-login-functionality-with-wrong-username-or-password",
+    "name": "Verify localization on login page",
+    "description": "  As a user, I shouldn\u0027t be able to see switch languages",
+    "id": "verify-localization-on-login-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/NegativeTestWrongEmailOrPassword.feature",
+    "uri": "file:src/test/resources/features/VerifyLocalizationLanguages.feature",
     "tags": []
   }
 ]

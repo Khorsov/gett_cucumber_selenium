@@ -1,6 +1,7 @@
 package com.newProject.step_definitions;
 
 import com.newProject.pages.LoginPage;
+import com.newProject.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;

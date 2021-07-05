@@ -2,14 +2,16 @@ package com.newProject.pages;
 
 import com.github.javafaker.Faker;
 import com.newProject.pages.base.BasePage;
+import com.newProject.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.regex.Pattern;
 
 public class LoginPage extends BasePage {
-    public String emailUsername = "hhorsovv@gmailcom";
-
+    public String emailUsername = ConfigurationReader.getProperty("userEmail");
+    public String emailPassword = ConfigurationReader.getProperty("userPassword");
     public static boolean isValid(String email)
     {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
@@ -27,6 +29,12 @@ public class LoginPage extends BasePage {
         Faker faker = new Faker();
         String fakeUsername = faker.name().username();
         return fakeUsername+"@gmail.com";
+    }
+    public void login(String emailUsername,String emailPassword){
+        loginInput.sendKeys(emailUsername);
+        nextBtn.click();
+        loginPassword.sendKeys(emailPassword);
+        signInBtn.click();
     }
     public static String createFakePassword(){
         Faker faker = new Faker();
@@ -47,4 +55,16 @@ public class LoginPage extends BasePage {
     public WebElement errorMessage;
     @FindBy(xpath = "//div[@data-name='emailValidationError']")
     public WebElement emailValidationError;
+    @FindBy(xpath = "//div[@data-name='loginLocalePicker']")
+    public WebElement languagesDropdown;
+
+
+    @FindBy(xpath = "//*[contains(text(),'English')]")
+    public WebElement dropdownEnglish;
+    @FindBy(xpath = "//*[contains(text(),'Russian')]")
+    public WebElement dropdownRussian;
+    @FindBy(xpath = "//*[contains(text(),'Hebrew')]")
+    public WebElement dropdownHebrew;
+
+
 }
