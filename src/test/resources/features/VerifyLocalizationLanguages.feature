@@ -4,13 +4,13 @@ Feature: Verify localization on login page
   Background:
     Given the user on login page
   @test
-  Scenario: User should see English language as first option
-    Then English should be as first option
+  Scenario: User should be click to click English language
+    Then English should be clickable
 
   Scenario: User should be able to see pick Russian language
     When User is clicking on Russian btn
-    Then Russian should be displayed
+    Then Russian should be clickable
 
   Scenario: User should be able to see pick Hebrew language
     When User is clicking on Hebrew btn
-    Then Webelement Hebrew should be displayed
+    Then Webelement Hebrew should be clickable

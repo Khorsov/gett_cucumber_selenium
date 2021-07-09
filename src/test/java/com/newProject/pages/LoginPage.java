@@ -2,16 +2,21 @@ package com.newProject.pages;
 
 import com.github.javafaker.Faker;
 import com.newProject.pages.base.BasePage;
+import com.newProject.utilities.BrowserUtils;
 import com.newProject.utilities.ConfigurationReader;
+import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.NoSuchElementException;
 import java.util.regex.Pattern;
 
 public class LoginPage extends BasePage {
     public String emailUsername = ConfigurationReader.getProperty("userEmail");
     public String emailPassword = ConfigurationReader.getProperty("userPassword");
+
     public static boolean isValid(String email)
     {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
@@ -24,6 +29,7 @@ public class LoginPage extends BasePage {
             return false;
         return pat.matcher(email).matches();
     }
+
 
     public static String createFakeUsername(){
         Faker faker = new Faker();
@@ -65,6 +71,5 @@ public class LoginPage extends BasePage {
     public WebElement dropdownRussian;
     @FindBy(xpath = "//*[contains(text(),'Hebrew')]")
     public WebElement dropdownHebrew;
-
 
 }
