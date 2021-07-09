@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6935000000,
+              "duration": 9409000000,
               "status": "passed"
             },
             "line": 5,
@@ -24,217 +24,39 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-08T18:52:29.025Z",
-        "line": 8,
-        "name": "",
+        "start_timestamp": "2021-07-09T06:03:02.032Z",
+        "line": 7,
+        "name": "User should be click to click English language",
         "description": "",
-        "id": "negative-login-functionality-with-wrong-username-or-password;",
+        "id": "verify-localization-on-login-page;user-should-be-click-to-click-english-language",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 807000000,
+              "duration": 255000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user login with invalid username",
+            "line": 8,
+            "name": "English should be clickable",
             "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_login_with_wrong_username()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 103000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user click on button Next",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_click_on_button_next()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 802000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user login with invalid password",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_login_with_wrong_password()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 84000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user click on button Sign In",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_click_on_button_sign_in()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 639000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user should see warning message on display",
-            "match": {
-              "location": "com.newProject.step_definitions.NegativeLoginWithInvalidUsernameOrPassword.user_should_see_warning_message_on_display_as()"
+              "location": "com.newProject.step_definitions.languageDropdownVerification.english_should_be_clickable()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@wip"
+            "name": "@test"
           }
         ]
       }
     ],
-    "name": "Negative Login Functionality with wrong username or password",
-    "description": "  As a user, I shouldn\u0027t be able to login using wrong username",
-    "id": "negative-login-functionality-with-wrong-username-or-password",
+    "name": "Verify localization on login page",
+    "description": "  As a user, I shouldn\u0027t be able to see switch languages",
+    "id": "verify-localization-on-login-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/NegativeTestWrongEmailOrPassword.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 1032000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user on login page",
-            "match": {
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.the_user_on_login_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-07-08T18:52:38.507Z",
-        "line": 8,
-        "name": "",
-        "description": "",
-        "id": "verify-forget-password-button;",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 622000000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user click on Forget Password button",
-            "match": {
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_click_on_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user should see message \"Need to access your account?\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Need to access your account?\"",
-                  "offset": 24
-                }
-              ],
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_should_see_message(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user should see message \"Enter your corporate email and we\u0027ll send you instructions for creating a new password.\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Enter your corporate email and we\u0027ll send you instructions for creating a new password.\"",
-                  "offset": 24
-                }
-              ],
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_should_see_message(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 142000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user should input his email",
-            "match": {
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_should_input_his()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 100000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user should click Reset Password button",
-            "match": {
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_should_click_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 613000000,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "user should see success notification message",
-            "match": {
-              "location": "com.newProject.step_definitions.VerifyForgetPasswordBtn.user_should_see_message_as()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      }
-    ],
-    "name": "Verify Forget Password button",
-    "description": "  As a user, I shouldn\u0027t be able to see \"Forget Password\" when login",
-    "id": "verify-forget-password-button",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/verifyForgetPasswordButton.feature",
+    "uri": "file:src/test/resources/features/VerifyLocalizationLanguages.feature",
     "tags": []
   }
 ]

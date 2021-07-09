@@ -7,13 +7,16 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class languageDropdownVerification extends LoginPage {
 
     LoginPage loginPage = new LoginPage();
     BrowserUtils utils = new BrowserUtils();
 
+
     @Then("English should be clickable")
     public void english_should_be_clickable() {
+        logger.info("clickable");
         utils.waitForElementClickable(dropdownEnglish);
     }
     @When("User is clicking on Russian btn")
@@ -23,6 +26,7 @@ public class languageDropdownVerification extends LoginPage {
 
     @Then("Russian should be clickable")
     public void russian_should_be_clickable() {
+        logger.info("clickable");
         utils.waitForElementClickable(dropdownRussian);
     }
 
@@ -32,6 +36,7 @@ public class languageDropdownVerification extends LoginPage {
     }
     @Then("Webelement Hebrew should be clickable")
     public void webelement_hebrew_should_be_clickable() {
+        logger.info("clickable");
         utils.waitForElementClickable(dropdownHebrew);
     }
 

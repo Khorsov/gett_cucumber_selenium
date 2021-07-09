@@ -1,5 +1,6 @@
 package com.newProject.utilities;
 
+import com.newProject.LoggerRoot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Driver {
+public class Driver{
 
     private Driver() {
     }
@@ -38,7 +39,6 @@ public class Driver {
                 }
             }
         }
-
 
         //This same driver will be returned every time we call Driver.getDriver() method
         return driverPool.get();
